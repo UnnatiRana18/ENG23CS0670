@@ -10,11 +10,12 @@ async function fetchPriorityNotifications() {
     try {
         console.log("Fetching notifications from API...");
         
-        const response = await fetch(API_URL, {
+        const urlWithParam = `${API_URL}?email=ranaunnati223@gmail.com`;
+
+        const response = await fetch(urlWithParam, {
             method: 'GET',
             headers: {
-                'Content-Type': 'application/json',
-                'accessCode': 'BgWZSW'
+                'Content-Type': 'application/json'
             }
         });
 
