@@ -1,6 +1,5 @@
 const url = 'http://4.224.186.213/evaluation-service/auth';
 
-// Adjust method to 'GET' if the endpoint doesn't accept POST
 async function makeRequest() {
     try {
         const response = await fetch(url, {

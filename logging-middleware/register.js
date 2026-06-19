@@ -1,6 +1,5 @@
 const url = 'http://4.224.186.213/evaluation-service/register';
 
-// Adjust method to 'GET' if the endpoint doesn't accept POST
 async function makeRequest() {
     try {
         const response = await fetch(url, {
@@ -15,14 +14,15 @@ async function makeRequest() {
                  "githubUsername":"UnnatiRana18",
                  "rollNo":"ENG23CS0670",
                  "accessCode":"BgWZSW"
-                // Add your payload data here if required
+                
             }),
         });
 
-        const data = await response.text(); // or .json() if it returns JSON
+        const data = await response.text();
         console.log('Status:', response.status);
         console.log('Response:', data);
-    } catch (error) {
+    }
+     catch (error) {
         console.error('Error making request:', error);
     }
 }
